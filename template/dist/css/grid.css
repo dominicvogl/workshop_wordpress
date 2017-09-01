@@ -1,0 +1,36 @@
+/* Boxmodell anpassen, so dass Prozentangaben bei den Grids funktionieren können */
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    overflow: hidden;
+}
+
+.column {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 520px) {
+
+    .column {
+        float: left;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+}
