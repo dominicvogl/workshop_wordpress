@@ -48,63 +48,34 @@
 		         wp_reset_postdata();
 	         }
 	         ?>
-            
+
             <ul id="image--feed" class="image--feed list--reset">
 
-               <li class="feed--item">
+	            <?php
+	            $attachment_args = array(
+		            'post_type' => 'attachment',
+                  'posts_per_page' => 5,
+                  'orderby' => 'rand'
+	            );
 
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/lost_place-09.jpg"
-                       alt="Lost Place">
+	            $attachment_posts = get_posts($attachment_args);
 
-                  <div class="item--meta">
-                     <span class="tag">Lost Place</span>
-                  </div>
-
-               </li>
-
-               <li class="feed--item">
-
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images-copyright/portrait-01.jpg"
-                       alt="Portrait">
-
-                  <div class="item--meta">
-                     <span class="tag">Portrait</span>
-                  </div>
-
-               </li>
-
-               <li class="feed--item">
-
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images-copyright/portrait-03.jpg"
-                       alt="Portrait">
-
-                  <div class="item--meta">
-                     <span class="tag">Portrait</span>
-                  </div>
-
-               </li>
-
-               <li class="feed--item">
-
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/lost_place-10.jpg"
-                       alt="Lost Place">
-
-                  <div class="item--meta">
-                     <span class="tag">Lost Place</span>
-                  </div>
-
-               </li>
-
-               <li class="feed--item">
-
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images-copyright/portrait-05.jpg"
-                       alt="Portrait">
-
-                  <div class="item--meta">
-                     <span class="tag">Portrait</span>
-                  </div>
-
-               </li>
+	            if ( is_array($attachment_posts) ) {
+		            foreach($attachment_posts as $post) {
+			            setup_postdata($post); ?>
+                     <!-- Blogpost -->
+                     <li class="feed--item">
+                        <?php echo wp_get_attachment_image($post->ID, 'large'); ?>
+                        <div class="item--meta">
+                           <span class="tag"><?php echo $post->post_title; ?></span>
+                        </div>
+                     </li>
+                     <!-- Blogpost ENDE -->
+			            <?php
+		            }
+		            wp_reset_postdata();
+	            }
+	            ?>
 
             </ul>
          </div>
