@@ -4,14 +4,13 @@
 add_theme_support('post-thumbnails');
 
 // Aktiviere neue Bildgrößen in der Wordpress Mediathek
-add_image_size('slider', 1170, 400, true);
+add_image_size('slider', 1170, 450, true);
 
 // Lade die CSS Dateien
 add_action('wp_enqueue_scripts', 'load_css');
 
 // Lade die Javascript Dateien
 add_action('wp_footer', 'load_javascript');
-
 
 /**
  * Funktion um die CSS Styles in das Template zu laden

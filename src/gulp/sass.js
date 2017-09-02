@@ -11,7 +11,7 @@ function stylesTask() {
         gulp.src([sourcePath + 'scss/' + baseName + '.scss'])
             .pipe(plumber())
             .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(sass({outputStyle: 'expanded'}))
             //.pipe(rename({suffix: '.min'}))
             .pipe(autoprefixer({
                 browsers: ['last 5 versions'],
