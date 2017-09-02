@@ -1,0 +1,35 @@
+{
+  "name": "Wordpress Workshop Template",
+  "description": "Wordpress Workshop Template",
+  "main": [
+    "dist/js/app.js",
+    "dist/css/app.css"
+  ],
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "sass",
+    "js",
+    "gulp",
+    "wordpress"
+  ],
+  "devDependencies": {
+    "fastclick": "^1.0.6",
+    "SimpleStateManager": "^3.1.3",
+    "slick-carousel": "^1.6.0",
+    "feature.js": "^1.0.1",
+    "macy": "^2.1.1"
+  },
+  "authors": [
+    "Dominic Vogl"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "homepage": "https://github.com/dominicvogl/voodookit"
+}

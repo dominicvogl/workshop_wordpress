@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-
-<!-- Im Browser nicht sichtbare Inhalte -->
-<head>
-
-   <!-- Zeichensatz einstellen -->
-   <meta charset="utf-8">
-
-   <!-- Viewport für mobile konfigurieren -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <title>Responsive Webdesign - 03 RWD</title>
-
-   <link href="https://fonts.googleapis.com/css?family=Abel|Roboto+Slab" rel="stylesheet">
-   <link rel="stylesheet" href="dist/css/grid.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="dist/css/slick.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="dist/css/styles.css" type="text/css" media="all" />
-
-</head>
-
-<!-- Im Browser sichtbare Inhalte -->
-<body>
-
-<!-- Logo -->
-<a href="#" class="logo">
-   <span>DV</span>
-</a>
-<!-- Logo ENDE -->
-
-<!-- Navigation -->
-<nav class="mod--navigation">
-   <ul class="list--reset main--navigation">
-      <li>
-         <a href="#" title="Home">Home</a>
-      </li>
-      <li>
-         <a href="#" title="Portrait">Portrait</a>
-      </li>
-      <li>
-         <a href="#" title="Konzerte">Lost Place</a>
-      </li>
-      <li>
-         <a href="#" title="Über mich">Über mich</a>
-      </li>
-   </ul>
-</nav>
-<!-- Navigation ENDE -->
+<?php get_header(); ?>
 
 <div class="mod row">
    <div class="column">
@@ -265,10 +218,7 @@
 
 <!-- Footer ENDE -->
 
-<script src="dist/js/jquery.2.2.4.min.js" type="text/javascript"></script>
-<script src="dist/js/slick.js" type="text/javascript"></script>
-<script src="dist/js/macy.js" type="text/javascript"></script>
-
+<script src="dist/js/app.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 

@@ -1,0 +1,23 @@
+{
+  "name": "voodookit",
+  "version": "2.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cli": "^0.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-plumber": "^0.6.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-watch": "^4.3.8",
+    "gutil": "^1.6.4",
+    "lodash": "^3.10.0",
+    "require-dir": "^0.3.0"
+  },
+  "dependencies": {
+    "path": "^0.11.14"
+  }
+}

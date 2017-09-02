@@ -1,0 +1,25 @@
+## ignore folders
+
+node_modules
+bower-components
+.idea
+
+## ignore Files
+
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+debug.log
+*.psd
+*.ai
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
