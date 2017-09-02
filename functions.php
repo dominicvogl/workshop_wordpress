@@ -1,10 +1,21 @@
 <?php
 
+// Aktiviere die Beitragsbilder für dieses Wordpress Template
+add_theme_support('post-thumbnails');
+
+// Aktiviere neue Bildgrößen in der Wordpress Mediathek
+add_image_size('slider', 1170, 400, true);
+
+// Lade die CSS Dateien
 add_action('wp_enqueue_scripts', 'load_css');
+
+// Lade die Javascript Dateien
 add_action('wp_footer', 'load_javascript');
 
+
 /**
- * Load CSS Files
+ * Funktion um die CSS Styles in das Template zu laden
+ * Die Dateien werden in der "header.php" in der Funktion "wp_head" geladen
  */
 
 function load_css() {
@@ -27,7 +38,8 @@ function load_css() {
 
 
 /**
- * Load Javascript files
+ * Funktion um die Javascript Dateien in das Template zu laden
+ * Die Dateien werden in der "footer.php" in der Funktion "wp_footer" geladen
  */
 
 function load_javascript() {
