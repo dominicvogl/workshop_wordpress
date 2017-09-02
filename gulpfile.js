@@ -11,14 +11,17 @@ var config = [
    // JS Filelist for concatinating
    jsFilesApp = [
 
+      // Jquery
+      sourcePath + 'bower-components/jquery/dist/jquery.js',
+
       // Fastclick
       sourcePath + 'bower-components/fastclick/lib/fastclick.js',
 
       // Feature.JS
       sourcePath + 'bower-components/feature.js/feature.js',
 
-      // Jquery
-      sourcePath + 'bower-components/jquery/dist/jquery.js',
+      // Macy.js
+      sourcePath + 'bower-components/macy/dist/macy.js',
 
       // Simple state manager
       // sourcePath + 'bower-components/SimpleStateManager/src/ssm.js',

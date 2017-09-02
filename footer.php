@@ -41,10 +41,9 @@
 	</div>
 
 </footer>
-
 <!-- Footer ENDE -->
 
-<script src="dist/js/app.js" type="text/javascript"></script>
+<?php wp_footer(); ?>
 
 <script type="text/javascript">
 
@@ -54,7 +53,6 @@
    });
 
    // Init Macy
-
    var macy  = Macy({
       container: '#image--feed',
       trueOrder: false,
@@ -67,9 +65,3 @@
    });
 
 </script>
-
-<?php wp_footer(); ?>
-
-</body>
-
-</html>
