@@ -31,18 +31,13 @@
 <!-- Navigation -->
 <nav class="mod--navigation">
 	<ul class="list--reset main--navigation">
-		<li>
-			<a href="#" title="Home">Home</a>
-		</li>
-		<li>
-			<a href="#" title="Portrait">Portrait</a>
-		</li>
-		<li>
-			<a href="#" title="Konzerte">Lost Place</a>
-		</li>
-		<li>
-			<a href="#" title="Über mich">Über mich</a>
-		</li>
+      <?php
+      wp_nav_menu( array(
+         'menu' => 'primary',
+         'container' => '',
+         'menu_class' => 'list--reset main--navigation'
+      ) );
+      ?>
 	</ul>
 </nav>
 <!-- Navigation ENDE -->

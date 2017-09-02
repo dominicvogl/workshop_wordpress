@@ -12,6 +12,10 @@ add_action('wp_enqueue_scripts', 'load_css');
 // Lade die Javascript Dateien
 add_action('wp_footer', 'load_javascript');
 
+// Registriere / Aktiviere individuelle Menüs im Wordpress Template
+add_action( 'after_setup_theme', 'register_menu' );
+
+
 /**
  * Funktion um die CSS Styles in das Template zu laden
  * Die Dateien werden in der "header.php" in der Funktion "wp_head" geladen
@@ -58,4 +62,8 @@ function load_javascript() {
 			wp_enqueue_script($file['handle']);
 		}
 	}
+}
+
+function register_menu() {
+	register_nav_menu( 'primary', __( 'Primary Menu', 'voodookit' ) );
 }
