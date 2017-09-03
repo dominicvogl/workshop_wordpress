@@ -18,8 +18,10 @@
 						setup_postdata( $post );
 						if ( has_post_thumbnail( $post->ID ) ) { ?>
                      <div>
-                        <?php echo $post->post_title; ?>
-                        <?php echo get_the_post_thumbnail( $post->ID, 'slider' ); ?>
+                        <a href="<?php the_permalink(); ?>">
+                           <header><?php echo $post->post_title; ?></header>
+                           <?php echo get_the_post_thumbnail( $post->ID, 'slider' ); ?>
+                        </a>
                      </div>
                   <?php
 						}
@@ -41,9 +43,10 @@
 	         <?php
 	         if ( have_posts() ) {
 		         while ( have_posts() ) {
-			         the_post();
-			         the_title('<h1>', '</h1>');
-			         echo "<div class='lead'>".get_the_content('')."</div>";
+			         the_post(); ?>
+                  <h1><?php the_title(); ?></h1>
+                  <div class="lead"><?php the_content(''); ?></div>
+                  <?php
 		         }
 		         wp_reset_postdata();
 	         }
@@ -78,6 +81,7 @@
 	            ?>
 
             </ul>
+
          </div>
       </div>
 
@@ -94,11 +98,11 @@
             'post_type' => 'post'
          );
 
-         $loop_posts = get_posts($loop_args);
+         $query_posts = new WP_Query($loop_args);
 
-			if ( is_array($loop_posts) ) {
-				foreach($loop_posts as $post) {
-					setup_postdata($post);
+         if ( $query_posts -> have_posts() ) {
+				while( $query_posts -> have_posts() ) {
+					$query_posts -> the_post();
 
 					$columns = 'column col-4';
 					if ( $count < 2 ) {
@@ -128,4 +132,4 @@
 
    </section>
 
-<?php get_footer(); ?>
+<?php get_footer();

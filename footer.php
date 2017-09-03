@@ -1,8 +1,6 @@
 <!-- Footer -->
 <footer class="mod mod--footer row">
-
 	<hr>
-
 	<!-- Kontaktdaten -->
 	<div class="column col-4">
 		<p>
@@ -16,12 +14,12 @@
 	<!-- Navigation im Footer -->
 	<nav class="column col-4">
 		<ul class="list--reset">
-			<li>
-				<a href="#" title="Datenschutz">Datenschutz</a>
-			</li>
-			<li>
-				<a href="#" title="Impressum">Impressum</a>
-			</li>
+         <?php
+         wp_list_pages( array(
+            'title_li' => '',
+            'include' => '25, 27'
+         ) );
+         ?>
 		</ul>
 	</nav>
 

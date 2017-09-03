@@ -44,13 +44,13 @@ hr {
 
 h1 {
     font-size: 2.2em;
-    color: rgb(225, 130, 27)
+    color: $primary--color;
 }
 
 h3 {
     font-family: "Roboto Slab", serif;
     font-size: 1.4em;
-    color: #e1821b;
+    color: $primary--color;
     position: relative;
     margin: 10px 0 60px;
 }
@@ -63,12 +63,12 @@ h3:before {
     width: 60px;
     bottom: -25px;
     height: 2px;
-    background: #e1821b;
+    background: $primary--color;
 }
 
 h3:after{
     width: 0;
-    background: #ffb217;
+    background: lighten($primary--color, 10%);
     transition: all 300ms;
 }
 
@@ -77,12 +77,12 @@ h3:after{
  */
 
 a {
-    color: #e1821b;
+    color: $primary--color;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ffb217;
+    color: lighten($primary--color, 10%);
 }
 
 /*
@@ -91,7 +91,7 @@ a:hover {
 
 .logo {
     position: fixed;
-    background: #e1821b;
+    background: $primary--color;
     width: 60px;
     height: 60px;
     display: block;
@@ -144,7 +144,7 @@ a:hover {
 }
 
 .main--navigation li:hover a {
-    background: #e1821b;
+    background: $primary--color;
     color: #fff;
 }
 
@@ -154,16 +154,16 @@ a:hover {
 
 .button {
     display: inline-block;
-    border: 2px solid #e1821b;
+    border: 2px solid $primary--color;
     padding: 10px 30px;
     text-transform: uppercase;
     transition: all 300ms;
-}
 
-.button:hover {
-    border: 2px solid #ffb217;
-    background: rgba(255, 178, 23, 0.2);
-    cursor: pointer;
+    &:hover {
+        border: 2px solid $primary--color;
+        background: transparentize($primary--color, 0.8);
+        cursor: pointer;
+    }
 }
 
 /*
@@ -196,7 +196,7 @@ article {
 }
 
 article:hover {
-    border-color: #e1821b;
+    border-color: $primary--color;
 }
 
 article:hover h3:after {
@@ -225,7 +225,7 @@ address {
 address:before,
 address:after {
     content: "";
-    background: #e1821b;
+    background: $primary--color;
     width: 80px;
     height: 2px;
     display: block;
@@ -252,10 +252,10 @@ address:after {
     display: block;
     position: relative;
     padding: 40px 0;
-}
 
-.feed--item img {
-    transition: all 300ms ease;
+    img {
+        transition: all 300ms ease;
+    }
 }
 
 .item--meta {
@@ -266,19 +266,19 @@ address:after {
     right: 20px;
     bottom: 20px;
     padding: 20px;
-    border: 2px solid rgba(225, 130, 27, 0.4);
+    border: 2px solid transparentize($primary--color, 0.6);
     transition: all 300ms ease;
-}
 
-.item--meta .tag {
-    position: absolute;
-    top: -1px;
-    background: #000;
-    color: #fff;
-    font-size: 0.85em;
-    font-family: Arial, sans-serif;
-    padding: 3px 8px;
-    transform: translate3d(0, -50%, 0);
+    .tag {
+        position: absolute;
+        top: -1px;
+        background: #000;
+        color: #fff;
+        font-size: 0.85em;
+        font-family: Arial, sans-serif;
+        padding: 3px 8px;
+        transform: translate3d(0, -50%, 0);
+    }
 }
 
 .feed--item:hover img {

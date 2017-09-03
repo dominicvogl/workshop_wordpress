@@ -26,9 +26,14 @@ function load_css() {
 	if (!is_admin()) {
 		$files = array(
 			array(
+				'handle' => 'font',
+				'src' => '//fonts.googleapis.com/css?family=Abel|Roboto+Slab',
+				'deps' => array(),
+			),
+			array(
 				'handle' => 'styles',
 				'src' => get_template_directory_uri() . '/dist/css/app.css',
-				'deps' => array(),
+				'deps' => array('font'),
 			)
 		);
 

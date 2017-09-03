@@ -1,5 +1,22 @@
+.slick-slide {
+    position: relative;
+
+    header {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        background: $black;
+        font-size: 1.65em;
+        padding: 5px 15px;
+    }
+
+    a, img {
+        display: block;
+    }
+}
+
 .slick-arrow {
-    color: #fff;
+    color: $white;
 }
 
 .slick-arrow {
@@ -8,8 +25,14 @@
     transform: translate3d(0, -50%, 0);
     z-index: 1;
     font-size: 1.4em;
-    background: #000;
+    background: $black;
     border: none;
+
+    &:hover {
+        cursor: pointer;
+        color: $black;
+        background: $primary--color;
+    }
 }
 
 .slick-prev {

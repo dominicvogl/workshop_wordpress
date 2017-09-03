@@ -101,60 +101,6 @@
   display: none;
 }
 
-/* Boxmodell anpassen, so dass Prozentangaben bei den Grids funktionieren können */
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  overflow: hidden;
-}
-
-.column {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 520px) {
-  .column {
-    float: left;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.333%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-}
-
-.slick-arrow {
-  color: #fff;
-}
-
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
-  z-index: 1;
-  font-size: 1.4em;
-  background: #000;
-  border: none;
-}
-
-.slick-prev {
-  left: 0;
-}
-
-.slick-next {
-  right: 0;
-}
-
 /*
  * Allgemeines
  */
@@ -199,13 +145,13 @@ hr {
  */
 h1 {
   font-size: 2.2em;
-  color: #e1821b;
+  color: #62b3c3;
 }
 
 h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1.4em;
-  color: #e1821b;
+  color: #62b3c3;
   position: relative;
   margin: 10px 0 60px;
 }
@@ -218,12 +164,12 @@ h3:before {
   width: 60px;
   bottom: -25px;
   height: 2px;
-  background: #e1821b;
+  background: #62b3c3;
 }
 
 h3:after {
   width: 0;
-  background: #ffb217;
+  background: #87c5d1;
   transition: all 300ms;
 }
 
@@ -231,12 +177,12 @@ h3:after {
  * Links / Anker
  */
 a {
-  color: #e1821b;
+  color: #62b3c3;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffb217;
+  color: #87c5d1;
 }
 
 /*
@@ -244,7 +190,7 @@ a:hover {
  */
 .logo {
   position: fixed;
-  background: #e1821b;
+  background: #62b3c3;
   width: 60px;
   height: 60px;
   display: block;
@@ -297,7 +243,7 @@ a:hover {
 }
 
 .main--navigation li:hover a {
-  background: #e1821b;
+  background: #62b3c3;
   color: #fff;
 }
 
@@ -306,15 +252,15 @@ a:hover {
  */
 .button {
   display: inline-block;
-  border: 2px solid #e1821b;
+  border: 2px solid #62b3c3;
   padding: 10px 30px;
   text-transform: uppercase;
   transition: all 300ms;
 }
 
 .button:hover {
-  border: 2px solid #ffb217;
-  background: rgba(255, 178, 23, 0.2);
+  border: 2px solid #62b3c3;
+  background: rgba(98, 179, 195, 0.2);
   cursor: pointer;
 }
 
@@ -348,7 +294,7 @@ article {
 }
 
 article:hover {
-  border-color: #e1821b;
+  border-color: #62b3c3;
 }
 
 article:hover h3:after {
@@ -376,7 +322,7 @@ address {
 address:before,
 address:after {
   content: "";
-  background: #e1821b;
+  background: #62b3c3;
   width: 80px;
   height: 2px;
   display: block;
@@ -415,7 +361,7 @@ address:after {
   right: 20px;
   bottom: 20px;
   padding: 20px;
-  border: 2px solid rgba(225, 130, 27, 0.4);
+  border: 2px solid rgba(98, 179, 195, 0.4);
   transition: all 300ms ease;
 }
 
@@ -464,6 +410,83 @@ address:after {
   .mod--footer > *:first-child {
     text-align: left;
   }
+}
+
+/* Boxmodell anpassen, so dass Prozentangaben bei den Grids funktionieren können */
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.column {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 520px) {
+  .column {
+    float: left;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.333%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slick-slide header {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: #000;
+  font-size: 1.65em;
+  padding: 5px 15px;
+}
+
+.slick-slide a, .slick-slide img {
+  display: block;
+}
+
+.slick-arrow {
+  color: #fff;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  z-index: 1;
+  font-size: 1.4em;
+  background: #000;
+  border: none;
+}
+
+.slick-arrow:hover {
+  cursor: pointer;
+  color: #000;
+  background: #62b3c3;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
 }
 
 /*# sourceMappingURL=app.css.map */
