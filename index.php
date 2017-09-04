@@ -20,11 +20,9 @@
 						setup_postdata( $post );
 						if ( has_post_thumbnail( $post->ID ) ) { ?>
                      <div>
-                        <a href="<?php the_permalink(); ?>">
-                           <header><?php echo $post->post_title; ?></header>
-                           <?php echo get_the_post_thumbnail( $post->ID, 'slider' ); ?>
-                           <a href="<?php the_permalink($post->ID); ?>" class="button">weiterlesen</a>
-                        </a>
+                        <header><?php echo $post->post_title; ?></header>
+	                     <?php echo get_the_post_thumbnail( $post->ID, 'slider' ); ?>
+                        <a href="<?php the_permalink($post->ID); ?>" class="button">weiterlesen</a>
                      </div>
                   <?php
 						}
