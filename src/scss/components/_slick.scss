@@ -1,17 +1,35 @@
+/*
+ * Slider
+ */
+
+.mod--slider {
+    padding: 30px 0;
+}
+
 .slick-slide {
+    $gap: 40px;
+
     position: relative;
 
     header {
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: $gap;
+        left: $gap;
         background: $black;
         font-size: 1.65em;
         padding: 5px 15px;
     }
 
-    a, img {
+    a,
+    img {
         display: block;
+    }
+
+    .button {
+        display: inline-block;
+        position: absolute;
+        bottom: $gap;
+        right: $gap;
     }
 }
 

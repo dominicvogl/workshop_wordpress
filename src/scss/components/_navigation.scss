@@ -1,0 +1,30 @@
+/*
+ * Navigation Styles
+ */
+
+.mod--navigation {
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+
+.main--navigation {
+   float: right;
+}
+
+.main--navigation li {
+   display: inline-block;
+   margin: 12px 1px;
+}
+
+.main--navigation a {
+   display: block;
+   padding: 8px;
+   transition: all 200ms;
+}
+
+.main--navigation li:hover a {
+   background: $primary--color;
+   color: #fff;
+}

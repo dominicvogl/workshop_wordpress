@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-   <div class="mod row">
+   <!-- START: Slider im Kopfbereich der Startseite -->
+   <section class="mod row">
+
       <div class="column">
          <div class="mod--slider">
 
@@ -21,6 +23,7 @@
                         <a href="<?php the_permalink(); ?>">
                            <header><?php echo $post->post_title; ?></header>
                            <?php echo get_the_post_thumbnail( $post->ID, 'slider' ); ?>
+                           <a href="<?php the_permalink($post->ID); ?>" class="button">weiterlesen</a>
                         </a>
                      </div>
                   <?php
@@ -32,9 +35,11 @@
 
          </div>
       </div>
-   </div>
 
-   <!-- Fotografie -->
+   </section>
+   <!-- ENDE: Slider im Kopfbereich der Startseite -->
+
+   <!-- START: Portfoliobereich / Bildergrid -->
    <section class="mod mod--image-feed">
 
       <div class="row">
@@ -86,9 +91,12 @@
       </div>
 
    </section>
-   <!-- Fotografie ENDE -->
+   <!-- ENDE: Portfoliobereich / Bildergrid -->
 
+   <!-- START Blogbereich mit aktuellen Beiträgen -->
    <section class="mod mod--blogroll">
+
+      <h1>Blogbeiträge</h1>
 
       <ul class="list--reset blogroll row">
 
@@ -131,5 +139,6 @@
       </ul>
 
    </section>
+   <!-- START Blogbereich mit aktuellen Beiträgen -->
 
 <?php get_footer();

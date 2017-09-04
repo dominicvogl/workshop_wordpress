@@ -16,6 +16,7 @@ body {
     color: #fff;
     font-family: "Abel", sans-serif;
     font-size: 20px;
+    padding-top: 45px;
 }
 
 img {
@@ -120,92 +121,11 @@ a:hover {
     color: #000;
 }
 
-/*
- * Navigation Styles
- */
 
-.mod--navigation {
-    overflow: hidden;
-}
 
-.main--navigation {
-    float: right;
-}
 
-.main--navigation li {
-    display: inline-block;
-    margin: 12px 1px;
-}
 
-.main--navigation a {
-    display: block;
-    padding: 8px;
-    transition: all 200ms;
-}
 
-.main--navigation li:hover a {
-    background: $primary--color;
-    color: #fff;
-}
-
-/*
- * Button Styles
- */
-
-.button {
-    display: inline-block;
-    border: 2px solid $primary--color;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    transition: all 300ms;
-
-    &:hover {
-        border: 2px solid $primary--color;
-        background: transparentize($primary--color, 0.8);
-        cursor: pointer;
-    }
-}
-
-/*
- * Blogroll Styles
- */
-
-.list--reset {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.mod {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.mod--navigation {
-    margin-bottom: 45px;
-}
-
-.blogroll {
-    list-style: none;
-}
-
-article {
-    border: 3px solid #fff;
-    filter: blur(0);
-    transition: all 400ms ease;
-}
-
-article:hover {
-    border-color: $primary--color;
-}
-
-article:hover h3:after {
-    width: 60px;
-}
-
-.inner-content {
-    padding: 0 20px 20px;
-}
 
 /**
  * Footer / Adressen
@@ -236,59 +156,7 @@ address:after {
     margin-top: 15px;
 }
 
-/*
- * Slider
- */
 
-.mod--slider {
-    padding: 30px 0;
-}
-
-/*
- * Image Feed
- */
-
-.feed--item {
-    display: block;
-    position: relative;
-    padding: 40px 0;
-
-    img {
-        transition: all 300ms ease;
-    }
-}
-
-.item--meta {
-    position: absolute;
-    display: block;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    padding: 20px;
-    border: 2px solid transparentize($primary--color, 0.6);
-    transition: all 300ms ease;
-
-    .tag {
-        position: absolute;
-        top: -1px;
-        background: #000;
-        color: #fff;
-        font-size: 0.85em;
-        font-family: Arial, sans-serif;
-        padding: 3px 8px;
-        transform: translate3d(0, -50%, 0);
-    }
-}
-
-.feed--item:hover img {
-    filter: brightness(0.5);
-
-}
-
-.feed--item:hover .item--meta {
-    top: 0;
-}
 
 /*
  * Media Queries
@@ -304,22 +172,21 @@ address:after {
     .mod--footer {
         margin-top: 40px;
         padding-top: 20px;
-    }
 
-    .mod--footer .column {
-        text-align: right;
-    }
+        .column {
+            text-align: right;
 
-    .mod--footer .column:first-of-type {
-        text-align: left;
+            &:first-of-type {
+                text-align: left;
+            }
+        }
+
+        > *:first-child {
+            text-align: left;
+        }
     }
 
     .social-media {
         margin: 0;
     }
-
-    .mod--footer > *:first-child {
-        text-align: left;
-    }
-
 }
