@@ -44,15 +44,25 @@
          <div class="column">
 
 	         <?php
+	         /**
+	          * Die Dokumentation für den Loop findest du hier:
+             * URL: https://codex.wordpress.org/The_Loop
+	          */
 	         if ( have_posts() ) {
 		         while ( have_posts() ) {
 			         the_post(); ?>
                   <h1><?php the_title(); ?></h1>
                   <div class="lead"><?php the_content(''); ?></div>
                   <?php
-		         }
+		         } // end while
 		         wp_reset_postdata();
-	         }
+	         } // end if
+            else {
+	            ?>
+               <h1><?php _e('Sorry...'); ?></h1>
+               <div class="lead"><?php _e('... leider wurden keine Posts gefunden');;?></div>
+               <?php
+            } // end else if
 	         ?>
 
             <ul id="image--feed" class="image--feed list--reset">
