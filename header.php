@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?php bloginfo('language'); ?>">
 
 <!-- Im Browser nicht sichtbare Inhalte -->
 <head>
 
 	<!-- Zeichensatz einstellen -->
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
 
 	<!-- Viewport für mobile konfigurieren -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title><?php bloginfo('title'); ?></title>
 
-	<?php wp_head(); ?>
+	<?php
+   // Gebe notwendige Scripte oder <meta> Tags an dieser Stelle aus
+   wp_head(); ?>
 
 </head>
 
@@ -29,6 +31,7 @@
 <nav class="mod--navigation">
 	<ul class="list--reset main--navigation">
       <?php
+      // Gebe die Hauptnavigation anhand der verschiedenen Parameter aus
       wp_nav_menu( array(
          'menu' => 'primary',
          'container' => '',

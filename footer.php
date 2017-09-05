@@ -3,18 +3,22 @@
 	<hr>
 	<!-- Kontaktdaten -->
 	<div class="column col-4">
-		<p>
+		<address>
 			Dominic Vogl<br/>
 			Sterntalerring 58<br/>
 			95447 Bayreuth
-		</p>
-		<p>Mobil: 0171 8387615</p>
+		</address>
+		<p>Mobil: <a href="tel:+491718387615">0171 8387615</a></p>
 	</div>
 
 	<!-- Navigation im Footer -->
 	<nav class="column col-4">
 		<ul class="list--reset">
          <?php
+         /**
+          * Liste alle Navigationspunkte für bestimmte Seiten auf
+          * https://developer.wordpress.org/reference/functions/wp_list_pages/
+          */
          wp_list_pages( array(
             'title_li' => '',
             'include' => '25, 27'
@@ -25,23 +29,22 @@
 
 	<!-- Social Media Profile -->
 	<div class="column col-4">
-		<ul class="list--reset social-media">
-			<li>
-				<a href="https://www.facebook.com/vogl.photography/" title="Facebook" target="_blank">Facebook</a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com/vogl_photography/" title="Instagram" target="_blank">Instagram</a>
-			</li>
-			<li>
-				<a href="https://500px.com/vogl-photography" title="500px" target="_blank">500px</a>
-			</li>
-		</ul>
+      <?php
+      wp_nav_menu( array(
+         'menu' => '8',
+         'container' => '',
+         'menu_class' => 'list--reset social-media'
+      ) );
+      ?>
 	</div>
 
 </footer>
 <!-- Footer ENDE -->
 
-<?php wp_footer(); ?>
+<?php
+// Binde notwendige Scripte im Footer ein
+wp_footer();
+?>
 
 <script type="text/javascript">
 
